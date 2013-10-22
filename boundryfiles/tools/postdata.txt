@@ -1,0 +1,132 @@
+
+postdata = """
+listCounty=StatewideNYS&listGeographyType=CountyCTY&radFileType=geographic&radGeoFileFmt=ESRIES&submit1=Submit
+"""
+
+posturl="""
+http://205.232.252.81/script.asp
+"""
+
+launchurl="""
+http://205.232.252.81/selectFiles.asp
+"""
+
+<select id="select1" style="WIDTH: 174px; HEIGHT: 95px" multiple size="1" name="listCounty" title="county" onblur="checkSelected()">
+<option value="StatewideNYS">Statewide</option>
+<option value="New York CityNYC">New York City</option>
+<option value="Long IslandLIS">Long Island</option>
+<option value="Albany001">Albany</option>
+<option value="Allegany003">Allegany</option>
+<option value="Bronx005">Bronx</option>
+<option value="Broome007">Broome</option>
+<option value="Cattaraugus009">Cattaraugus</option>
+<option value="Cayuga011">Cayuga</option>
+<option value="Chautauqua013">Chautauqua</option>
+<option value="Chemung015">Chemung</option>
+<option value="Chenango017">Chenango</option>
+<option value="Clinton019">Clinton</option>
+<option value="Columbia021">Columbia</option>
+<option value="Cortland023">Cortland</option>
+<option value="Delaware025">Delaware</option>
+<option value="Dutchess027">Dutchess</option>
+<option value="Erie029">Erie</option>
+<option value="Essex031">Essex</option>
+<option value="Franklin033">Franklin</option>
+<option value="Fulton035">Fulton</option>
+<option value="Genesee037">Genesee</option>
+<option value="Greene039">Greene</option>
+<option value="Hamilton041">Hamilton</option>
+<option value="Herkimer043">Herkimer</option>
+<option value="Jefferson045">Jefferson</option>
+<option value="Kings047">Kings</option>
+<option value="Lewis049">Lewis</option>
+<option value="Livingston051">Livingston</option>
+<option value="Madison053">Madison</option>
+<option value="Monroe055">Monroe</option>
+<option value="Montgomery057">Montgomery</option>
+<option value="Nassau059">Nassau</option>
+<option value="New York061">New York</option>
+<option value="Niagara063">Niagara</option>
+<option value="Oneida065">Oneida</option>
+<option value="Onondaga067">Onondaga</option>
+<option value="Ontario069">Ontario</option>
+<option value="Orange071">Orange</option>
+<option value="Orleans073">Orleans</option>
+<option value="Oswego075">Oswego</option>
+<option value="Otsego077">Otsego</option>
+<option value="Putnam079">Putnam</option>
+<option value="Queens081">Queens</option>
+<option value="Rensselaer083">Rensselaer</option>
+<option value="Richmond085">Richmond</option>
+<option value="Rockland087">Rockland</option>
+<option value="St. Lawrence089">St. Lawrence</option>
+<option value="Saratoga091">Saratoga</option>
+<option value="Schenectady093">Schenectady</option>
+<option value="Schoharie095">Schoharie</option>
+<option value="Schuyler097">Schuyler</option>
+<option value="Seneca099">Seneca</option>
+<option value="Steuben101">Steuben</option>
+<option value="Suffolk103">Suffolk</option>
+<option value="Sullivan105">Sullivan</option>
+<option value="Tioga107">Tioga</option>
+<option value="Tompkins109">Tompkins</option>
+<option value="Ulster111">Ulster</option>
+<option value="Warren113">Warren</option>
+<option value="Washington115">Washington</option>
+<option value="Wayne117">Wayne</option>
+<option value="Westchester119">Westchester</option>
+<option value="Wyoming121">Wyoming</option>
+<option value="Yates123">Yates</option>
+</select>
+
+
+<select id="select2" style="LEFT: 2px; WIDTH: 222px; TOP: 507px; HEIGHT: 86px" size="2" 
+      name="listGeographyType" title="type of geography" > 
+<option value="CountyCTY">County</option>
+<option value="Towns and CitiesCSD">Towns and Cities</option>
+<option value="Cities and VillagesIPT">Cities and Villages</option>
+<option value="City and Village partsIPS">City and Village parts</option>
+<option value="Census Tract TotalCTT">Census Tract Total</option>
+<option value="Census Block GroupBKG">Census Block Group</option>
+<option value="Census BlocksBLK">Census Blocks</option>
+<option value="Metro Areas 2000MSA">Metro Areas 2000</option>
+<option value="Metro Areas 2003CBA">Metro Areas 2003</option>
+<option value="NY 108th Congressional DistrictsCGD">NY 108th Congressional Districts</option>
+<option value="NY State Assembly DistrictsASD">NY State Assembly Districts</option>
+<option value="NY State Senate DistrictsSTD">NY State Senate Districts</option>
+<option value="Empire ZonesEMZ">Empire Zones</option>
+</select>
+
+<input type="radio" value="attributes" name="radFileType" onclick="showIt4()">
+
+<input type="radio" value="ESRIES" name="radGeoFileFmt">
+
+<input type="radio" value="MapInfoMI" name="radGeoFileFmt">
+
+<input type="radio" value="MaptitudeMT" name="radGeoFileFmt">
+
+<select id="select4" style="WIDTH: 217px; TOP: 333px; HEIGHT: 70px" size="4" onchange="blockCheck()" name="listAttributes" multiple> 
+<option value="General PopulationPOP">General Population *</option>	<option value="General SocialSOC">General Social</option>
+<option value="General EconomicECN">General Economic</option>
+<option value="General HousingHSG">General Housing</option>
+<option value="Age-American Indian AloneAIA">Age-American Indian Alone *</option>
+<option value="Age-Asian AloneASA">Age-Asian Alone *</option>
+<option value="Age-Black/African Amer. AloneBLA">Age-Black/African Amer. Alone *</option>
+<option value="Age-Native Hawaiian AloneHAA">Age-Native Hawaiian Alone *</option>
+<option value="Age-White AloneWHA">Age-White Alone *</option>
+<option value="Age-Other AloneOTA">Age-Other Alone *</option>
+<option value="Age-Two or More Races2RA">Age-Two or More Races *</option>
+<option value="Age-Hispanic/LatinoHSA">Age-Hispanic/Latino *</option>
+<option value="Age-NonHispanic WhiteWNA">Age-NonHispanic White *</option>
+<option value="AncestryANC">Ancestry</option>
+<option value="DisabilityDIS">Disability</option>
+<option value="EducationEDU">Education</option>
+<option value="EmploymentEMP">Employment</option>
+</select>
+
+<input type="submit" value="Submit" id="submit1" name="submit1" ONCLICK="return validate2()">
+
+<input type="reset" value="Reset" id="reset1" name="reset1" ONCLICK="resetForm()"> 
+
+
+
